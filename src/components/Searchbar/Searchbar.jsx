@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
 import PropTypes from 'prop-types';
+import { FiSearch } from 'react-icons/fi';
 import {
   Header,
   SearchForm,
@@ -33,7 +34,9 @@ export default class Searchbar extends Component {
     return (
       <Header className="searchbar">
         <SearchForm className="form" onSubmit={this.hendleSubmit}>
-          <SearchFormBtn type="submit">Search</SearchFormBtn>
+          <SearchFormBtn type="submit">
+            <FiSearch style={{ width: 20, height: 20 }} />
+          </SearchFormBtn>
 
           <SearchFormInput
             className="input"

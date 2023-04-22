@@ -64,7 +64,9 @@ export default class App extends React.Component {
       <AppContainer>
         <Searchbar onSubmit={this.hendleSearchSubmit} />
         {images && <ImageGallery images={images} />}
-        {!!totalHits && <Button onLoadMore={this.handleLoadMore} />}
+        {!!totalHits && (
+          <Button onLoadMore={this.handleLoadMore} disabled={isLoading} />
+        )}
         {isLoading && <Loader />}
         <ToastContainer autoClose={2000} />
       </AppContainer>
